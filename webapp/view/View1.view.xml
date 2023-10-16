@@ -1,0 +1,22 @@
+<mvc:View
+    controllerName="leo.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content />
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button
+                    text="Send SMS"
+                    press="sendMessage"
+                />
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

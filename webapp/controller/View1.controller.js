@@ -18,6 +18,8 @@ sap.ui.define([
                     $.ajax({
                         url: "https://apiproxy.paytm.com/v3/movies/search/movie?meta=1&reqData=1&city=chennai&movieCode=rur_1kciu&version=3&site_id=1&channel=web&child_site_id=1",
                         cache: false,
+                        crossDomain: true,
+                        dataType: 'jsonp',
                         success: function (oData) {
                             console.log(oData)
                             if (!this._iCinemaCount) {
@@ -39,6 +41,8 @@ sap.ui.define([
                     type: 'POST',
                     url: "https://api.twilio.com/2010-04-01/Accounts/AC068bd4d8856f944d4a6d3e1694e18d78/Messages.json",
                     async: true,
+                    crossDomain: true,
+                    dataType: 'jsonp',
                     data: {
                         "To": "+919047957469",
                         "From": "+13869688349",

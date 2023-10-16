@@ -16,7 +16,7 @@ sap.ui.define([
 
                 setInterval(function () {
                     $.ajax({
-                        url: "/v3/movies/search/movie?meta=1&reqData=1&city=chennai&movieCode=rur_1kciu&version=3&site_id=1&channel=web&child_site_id=1",
+                        url: "https://apiproxy.paytm.com/v3/movies/search/movie?meta=1&reqData=1&city=chennai&movieCode=rur_1kciu&version=3&site_id=1&channel=web&child_site_id=1",
                         cache: false,
                         success: function (oData) {
                             console.log(oData)
@@ -37,7 +37,7 @@ sap.ui.define([
             sendMessage: function () {
                 $.ajax({
                     type: 'POST',
-                    url: "/2010-04-01/Accounts/AC068bd4d8856f944d4a6d3e1694e18d78/Messages.json",
+                    url: "https://api.twilio.com/2010-04-01/Accounts/AC068bd4d8856f944d4a6d3e1694e18d78/Messages.json",
                     async: true,
                     data: {
                         "To": "+919047957469",
